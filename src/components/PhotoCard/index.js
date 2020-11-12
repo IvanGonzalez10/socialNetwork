@@ -10,14 +10,19 @@ export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
 
   useEffect(
     function () {
-      const observer = new window.IntersectionObserver(function (entries) {
-        const { isIntersecting } = entries[0];
-        if (isIntersecting) {
-          setShow(true);
-          observer.disconnect();
-        }
-      });
-      observer.observe(element.current);
+      Promise.resolve(
+        // eslint-disable-next-line func-call-spacing
+        typeof window.IntersectionObserver !== 'undefined' ? window.IntersectionObserver : import ('intersection-observer'))
+        .then(() => {
+          const observer = new window.IntersectionObserver(function (entries) {
+            const { isIntersecting } = entries[0];
+            if (isIntersecting) {
+              setShow(true);
+              observer.disconnect();
+            }
+          });
+          observer.observe(element.current);
+        })
     },
     [element]
   );
