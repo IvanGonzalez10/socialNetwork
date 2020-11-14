@@ -1,7 +1,9 @@
-import * as React from "react";
-import {Svg} from './styles';
+import React from "react";
+import { Link } from "@reach/router";
+import { Svg } from "./styles";
 
 export const Logo = (props) => {
+  <Link to="/" />;
   return (
     <Svg
       width={385.458}
@@ -59,8 +61,8 @@ export const Logo = (props) => {
           fill="url(#prefix__editing-halftone-gradient)"
           transform="translate(117.325 102.745)"
         />
-        </g>
-        <style />
-      </Svg>
-    )
-  }
+      </g>
+      <style />
+    </Svg>
+  );
+};

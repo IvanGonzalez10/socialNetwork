@@ -1,6 +1,7 @@
 {
   "version": 2,
-  "name": "petgram",
+  "name": "petgram-server-ivan",
+  "alias": ["petgram-api-ivan"],
   "builds": [
     {
       "use": "@vercel/static-build",

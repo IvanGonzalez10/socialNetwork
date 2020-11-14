@@ -1,5 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import {App} from './App'
+import React from "react";
+import ReactDOM from "react-dom";
+import ApolloClient from "apollo-boost";
+import {ApolloProvider} from 'react-apollo';
 
-ReactDOM.render( <App />, document.getElementById('app'))
+import { App } from "./App";
+
+
+ReactDOM.render(<App />, document.getElementById("app"));
