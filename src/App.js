@@ -6,6 +6,7 @@ import { Favs } from "./pages/Favs";
 import { User } from "./pages/User";
 import { NotRegisteredUser } from "./pages/NotRegisteredUser";
 import { NavBar } from "./components/NavBar";
+import { NotFound } from './pages/NotFound';
 
 import { Router } from "@reach/router";
 import Context from './Context';
@@ -15,6 +16,7 @@ export const App = () => (
     <GlobalStyle />
     <Logo />
     <Router>
+      <NotFound default />
       <Home path="/" />
       <Home path="/pet/:id" />
     </Router>
