@@ -6,10 +6,10 @@ import { Favs } from "./pages/Favs";
 import { User } from "./pages/User";
 import { NotRegisteredUser } from "./pages/NotRegisteredUser";
 import { NavBar } from "./components/NavBar";
-import { NotFound } from './pages/NotFound';
+import { NotFound } from "./pages/NotFound";
 
 import { Router } from "@reach/router";
-import Context from './Context';
+import Context from "./Context";
 
 export const App = () => (
   <>
@@ -22,15 +22,17 @@ export const App = () => (
     </Router>
     <Context.Consumer>
       {({ isAuth }) =>
-        isAuth ?
+        isAuth ? (
           <Router>
             <Favs path="/favs" />
             <User path="/user" />
           </Router>
-         : <Router>
+        ) : (
+          <Router>
             <NotRegisteredUser path="/favs" />
             <NotRegisteredUser path="/user" />
           </Router>
+        )
       }
     </Context.Consumer>
     <NavBar />
