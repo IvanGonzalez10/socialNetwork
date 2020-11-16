@@ -1,5 +1,8 @@
-# curso-platzi-react-avanzado ⚛️
+#App de para ver mascotas
 
-¡Sígueme en Youtube! https://www.youtube.com/midudev
+Requiere node.js
 
-Repositorio con el código del [Curso Avanzado de React de Platzi](https://platzi.com/cursos/react-avanzado/)
+"npm install" para instalar las dependencias "npm run dev" para el entorno de desarrollo 
+"npm run build && npm run start" para el entorno de producción.
+
+Link para ver la app: https://petgram-i.vercel.app/
